@@ -19,11 +19,11 @@
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsgen-Servicio" depends="wsgen-init">
+    <target name="wsgen-AirportsCitiesAlberto" depends="wsgen-init">
         <copy todir="${build.classes.dir}/META-INF">
-            <fileset dir="${webinf.dir}" includes="wsit-Services.Servicio.xml"/>
+            <fileset dir="${webinf.dir}" includes="wsit-Services.AirportsCitiesAlberto.xml"/>
         </copy>
-        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="Services.Servicio" xendorsed="true">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="Services.AirportsCitiesAlberto" xendorsed="true">
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>
@@ -81,5 +81,5 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/net/webservicex"/>
         <delete dir="${build.generated.dir}/jax-wsCache/service/AirportInformation"/>
     </target>
-    <target name="wsimport-service-generate" depends="wsimport-service-GlobalWeather, wsimport-init, wsimport-service-AirportInformation"/>
+    <target name="wsimport-service-generate" depends="wsimport-service-GlobalWeather, wsimport-service-AirportInformation, wsimport-init"/>
 </project>

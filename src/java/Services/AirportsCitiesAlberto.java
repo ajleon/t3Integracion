@@ -17,14 +17,14 @@ import net.webservicex.AirportSoap;
  *
  * @author alberto
  */
-@WebService(serviceName = "Servicio")
-public class Servicio {
+@WebService(serviceName = "AirportsCitiesAlberto")
+public class AirportsCitiesAlberto {
 
     /**
      * This is a sample web service operation
      */
      @WebMethod(operationName = "obtenerCiudadesYAeropuertos")
-  public String obtenerCiudades(@WebParam(name = "pais") String pais) {
+  public String[] obtenerCiudades(@WebParam(name = "pais") String pais) {
     // se crea cliente para servicio global weather
     GlobalWeather gw = new GlobalWeather();
     Airport a = new Airport();
@@ -37,8 +37,11 @@ public class Servicio {
     // queda en variable cities
     String cities = gwSoap.getCitiesByCountry(pais);
     String airports = aSoap.getAirportInformationByCountry(pais);
-    
-    
-    return cities+airports;
+   
+    String[] citiesAirport = new String[2];
+   
+    citiesAirport[0] = cities;
+    citiesAirport[1] = airports;
+    return citiesAirport;
   }
 }
