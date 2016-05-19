@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "airport", targetNamespace = "http://www.webserviceX.NET", wsdlLocation = "file:/Users/alberto/NetBeansProjects/Tarea3/src/conf/xml-resources/web-services/AirportInformation/wsdl/AirportInformation.asmx.wsdl")
+@WebServiceClient(name = "airport", targetNamespace = "http://www.webserviceX.NET", wsdlLocation = "file:/Users/alberto/NetBeansProjects/t3Integracion/src/conf/xml-resources/web-services/AirportInformation/wsdl/AirportInformation.asmx.wsdl")
 public class Airport
     extends Service
 {
@@ -30,7 +30,7 @@ public class Airport
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/Users/alberto/NetBeansProjects/Tarea3/src/conf/xml-resources/web-services/AirportInformation/wsdl/AirportInformation.asmx.wsdl");
+            url = new URL("file:/Users/alberto/NetBeansProjects/t3Integracion/src/conf/xml-resources/web-services/AirportInformation/wsdl/AirportInformation.asmx.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

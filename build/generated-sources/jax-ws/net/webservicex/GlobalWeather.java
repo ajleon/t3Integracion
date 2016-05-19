@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "GlobalWeather", targetNamespace = "http://www.webserviceX.NET", wsdlLocation = "file:/Users/alberto/NetBeansProjects/Tarea3/src/conf/xml-resources/web-services/GlobalWeather/wsdl/globalweather.asmx.wsdl")
+@WebServiceClient(name = "GlobalWeather", targetNamespace = "http://www.webserviceX.NET", wsdlLocation = "file:/Users/alberto/NetBeansProjects/t3Integracion/src/conf/xml-resources/web-services/GlobalWeather/wsdl/globalweather.asmx.wsdl")
 public class GlobalWeather
     extends Service
 {
@@ -30,7 +30,7 @@ public class GlobalWeather
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/Users/alberto/NetBeansProjects/Tarea3/src/conf/xml-resources/web-services/GlobalWeather/wsdl/globalweather.asmx.wsdl");
+            url = new URL("file:/Users/alberto/NetBeansProjects/t3Integracion/src/conf/xml-resources/web-services/GlobalWeather/wsdl/globalweather.asmx.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
